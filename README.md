@@ -1,8 +1,7 @@
 ## Lidando com requisições
 
-Todo site que utiliza o PHP inicia-se com um simples arquivo, na maioria dos casos é o index.php.
-
-As informações do PHP podem ser visualizadas em uma página web:
+Todo site PHP inicia-se com um simples arquivo, neste caso, o index.php é responsável por receber as requisições do servidor web.
+Por exemplo, as informações sobre o servidor PHP podem ser visualizadas por uma página web:
 
 ```php
 <?php
@@ -10,7 +9,7 @@ As informações do PHP podem ser visualizadas em uma página web:
 phpinfo();
 ```
 
-PHP permite o acesso as variáveis via requisições por scripts:
+O PHP permite o acesso a variáveis solicitadas via scripts e para melhor entendimento, os nomes das variáveis tem que ser objetivo, ou seja, ter um significado claro:
 
 ```php
 <?php
@@ -25,7 +24,8 @@ if ($requestMethod === 'GET' and $requestPath === '/') {
 }
 ```
 
-Adicionando HTML para as requisições das variáveis:
+As requisições podem ser apresentadas por HTML, e também via JSON ou XML. Para retornar diretamente no HTML:
+
 ```php
 <?php
 
@@ -46,7 +46,11 @@ if ($requestMethod === 'GET' and $requestPath === '/') {
 }
 ```
 
-O PHP permite o redirecionamento de uma página cujo o URL não está mais em uso para um novo endereço, evitando assim a necessidade de alterar muitos trechos de código:
+Obs: A sintaxe <b>??</b> declarada acima diz que tudo que está à sua esquerda é nulo ou indefinido, logo será utilizado o que foi declarado à direita.
+
+<br>
+
+Também é possível fazer redirecionamentos das requisições, permitindo que uma URL antiga aponte diretamente para a URL nova:
 
 ```php
 <?php
